@@ -1,0 +1,46 @@
+---
+---
+
+<div class="top">
+  <div class="top2">
+    <img class="menu" src="back-btn.svg" alt="back" />
+    <img class="menu" src="forward-btn.svg" alt="forvard" />
+  </div>
+  <div class="top3">
+    <a href="#">Sign up</a>
+    <button>Log in</button>
+  </div>
+</div>
+
+<style>
+  .top {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #0f0f0f;
+  }
+  .top2 {
+    grid-column: 1/2;
+  }
+  .top3 {
+    grid-column: 6/7;
+    margin-top: 0.7rem;
+  }
+  button {
+    padding-inline: 20px;
+    padding-block: 8px;
+    border-radius: 20px;
+    border: none;
+  }
+  a {
+    margin-right: 1.2rem;
+    text-decoration: none;
+    color: rgb(147, 147, 147);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+  }
+  .menu {
+    width: 8%;
+    margin: 1rem;
+    filter: brightness(0.5);
+  }
+</style>

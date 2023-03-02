@@ -1,15 +1,87 @@
 ---
+import "../styles/style.css";
+import Menu from "../components/Menu.astro";
+import MenuButtons from "../components/MenuButtons.astro";
+import TopMenu from "../components/TopMenu.astro";
+import List from "../components/List.astro";
+import Albums from "../components/Albums.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main class="grid_1_8">
+      <section class="menu_grid">
+        <Menu />
+        <MenuButtons />
+      </section>
+      <div class="content">
+        <TopMenu />
+
+        <List category="Spotify Playlists" />
+        <section class="playlists">
+          <Albums name="Today's Top Hits" text="Katty Perry, Ariana Grande ">
+            <img src="/albums/1.jpg" alt="1" />
+          </Albums>
+          <Albums name="RapCaviar" text="New music from The Weekend, Quavo...">
+            <img src="/albums/2.jpg" alt="2" />
+          </Albums>
+          <Albums name="All Out 2010s" text="The biggest songs of the 2010s ">
+            <img src="/albums/3.jpg" alt="3" />
+          </Albums>
+          <Albums name="Rock Classics" text="Rock legends & epic songs">
+            <img src="/albums/4.jpg" alt="3" />
+          </Albums>
+          <Albums name="Chill Hits" text="Kick back to the best new and recent chill..">
+            <img src="/albums/5.jpeg" alt="3" />
+          </Albums>
+          <Albums name="Viva Latino" text="Today's top Latin hits">
+            <img src="/albums/6.jpg" alt="3" />
+          </Albums>
+          <Albums name="Mega Hit Mix" text="A mega mix of 75 favoritsfrom the...">
+            <img src="/albums/7.jpg" alt="3" />
+          </Albums>
+        </section>
+        <List category="Focus" />
+        <section class="playlists">
+          <Albums name="Peaceful Piano" text="Keep calm and focus with ambient and positive.. ">
+            <img src="/albums/7.jpg" alt="1" />
+          </Albums>
+          <Albums name="RapCaviar" text="New music from The Weekend, Quavo...">
+            <img src="/albums/8.jpg" alt="2" />
+          </Albums>
+          <Albums name="All Out 2010s" text="The biggest songs of the 2010s ">
+            <img src="/albums/5.jpeg" alt="3" />
+          </Albums>
+          <Albums name="Rock Classics" text="Rock legends & epic songs">
+            <img src="/albums/6.jpg" alt="3" />
+          </Albums>
+          <Albums name="Chill Hits" text="Kick back to the best new and recent chill..">
+            <img src="/albums/1.jpg" alt="3" />
+          </Albums>
+          <Albums name="Viva Latino" text="Today's top Latin hits">
+            <img src="/albums/3.jpg" alt="3" />
+          </Albums>
+          <Albums name="Mega Hit Mix" text="A mega mix of 75 favoritsfrom the...">
+            <img src="/albums/4.jpg" alt="3" />
+          </Albums>
+        </section>
+        <List category="Sleep" />
+        <section class="playlists">
+          <Albums name="Today's Top Hits" text="Katty Perry, Ariana Grande ">
+            <img src="/albums/6.jpg" alt="1" />
+          </Albums>
+          <Albums name="RapCaviar" text="New music from The Weekend, Quavo...">
+            <img src="/albums/7.jpg" alt="2" />
+          </Albums>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
